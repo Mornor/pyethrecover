@@ -131,7 +131,7 @@ class DecryptionException(Exception):
 def getseed(encseed, pw, ethaddr):
     try:
         seed = aes.decryptData(pw, binascii.unhexlify(encseed))
-    except Exception, e:
+    except Exception as e:
         raise DecryptionException("AES Decryption error. Bad password?")
     try:
         ethpriv = sha3(seed)
