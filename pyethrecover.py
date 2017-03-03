@@ -137,7 +137,7 @@ def getseed(encseed, pw, ethaddr):
         ethpriv = sha3(seed)
         eth_privtoaddr(ethpriv)
         assert eth_privtoaddr(ethpriv) == ethaddr
-    except Exception, e:
+    except Exception as e:
         # print ("eth_priv = %s" % eth_privtoaddr(ethpriv))
         # print ("ethadd = %s" % ethaddr)
         # traceback.print_exc()
@@ -165,7 +165,7 @@ def crack(wallet_filename, grammar):
     w = json.loads(t)
     try:
         Parallel(n_jobs=-1)(delayed(attempt)(w, pw) for pw in generate_all(grammar,''))
-    except Exception, e:
+    except Exception as e:
         traceback.print_exc()
         while True:
             sys.stdout.write('\a')
