@@ -6,7 +6,7 @@ It's essentially a stripped-down version of [pyethsaletool](https://github.com/e
 to be used to generate passwords. The multiprocessing library `joblib` is used to test out passwords using
 all the cores on your machine. 
 
-This tool is compatible with both Python 2 and Python 3. It depends on the following libraries
+This tool is compatible with both Python 2. It depends on the following libraries
     
     joblib
     bitcoin
